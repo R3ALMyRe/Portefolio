@@ -6,21 +6,21 @@ const techWatchSites = [
       name: "Dribbble",
       description: "Une plateforme où les designers UX/UI partagent leurs créations et s'inspirent des tendances.",
       link: "https://www.dribbble.com",
-      image: "/dribbble.png",
+      image: "dribbble.png",
     },
     {
       id: 2,
       name: "Wix",
       description: "Un outil intuitif permettant de créer des sites web avec des designs modernes et responsives.",
       link: "https://fr.wix.com/",
-      image: "/wix.png",
+      image: "wix.png",
     },
     {
       id: 3,
       name: "Behance",
       description: "Un réseau social pour les designers, où l'on découvre des projets UX/UI innovants.",
       link: "https://www.behance.net/",
-      image: "/behance.png",
+      image: "behance.png",
     },
   ];
 
