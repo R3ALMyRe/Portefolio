@@ -57,55 +57,57 @@ const projects = [
 const Projects = () => {
   const projectsRefs = useRef<(HTMLDivElement | null)[]>([]);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
-  const [isMobile, setIsMobile] = useState(false); // État pour savoir si l'écran est mobile
+  const [isMobile, setIsMobile] = useState(false);
+  let lastScrollY = useRef(window.scrollY).current;
 
   useEffect(() => {
-    // Détection de la taille de l'écran
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Si la largeur est inférieure à 768px
+      setIsMobile(window.innerWidth < 768);
     };
 
-    // Initialiser la vérification de la taille
     handleResize();
-
-    // Ajouter un écouteur d'événements pour redimensionner
     window.addEventListener("resize", handleResize);
 
-    // Supprimer l'écouteur lorsque le composant est démonté
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   useEffect(() => {
-    // Si ce n'est pas un écran mobile, on applique l'animation GSAP
     if (!isMobile) {
-      // Animation du titre avec GSAP
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, y: -50 },
-        { opacity: 1, y: 0, duration: 1, ease: "bounce.out" }
+        { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
       );
 
       const observer = new IntersectionObserver(
         (entries) => {
+          const currentScrollY = window.scrollY;
+          const scrollingDown = currentScrollY > lastScrollY;
+          lastScrollY = currentScrollY;
+
           entries.forEach((entry) => {
+            const index = parseInt(entry.target.getAttribute("data-index") || "0");
+
             if (entry.isIntersecting) {
-              // Animation depuis la gauche ou la droite en fonction de l'index
-              gsap.to(entry.target, {
-                opacity: 1,
-                x: 0, // Rétablir la position à la normale
-                duration: 0.6,
-                ease: "power3.out",
-              });
+              if (scrollingDown) {
+                gsap.to(entry.target, {
+                  opacity: 1,
+                  x: 0,
+                  duration: 0.6,
+                  ease: "power3.out",
+                });
+              }
             } else {
-              // Animation de départ, à gauche pour les éléments impairs et à droite pour les éléments pairs
-              gsap.to(entry.target, {
-                opacity: 0,
-                x: entry.target.dataset.index % 2 === 0 ? -200 : 200, // Déplacement vers la gauche ou la droite en fonction de l'index
-                duration: 0.6,
-                ease: "power3.out",
-              });
+              if (!scrollingDown) {
+                gsap.to(entry.target, {
+                  opacity: 0,
+                  x: index % 2 === 0 ? -200 : 200,
+                  duration: 0.6,
+                  ease: "power3.out",
+                });
+              }
             }
           });
         },
@@ -122,7 +124,7 @@ const Projects = () => {
         });
       };
     }
-  }, [isMobile]); // L'effet se déclenche quand la taille de l'écran change
+  }, [isMobile]);
 
   return (
     <Container fluid className="projects-container">
@@ -131,15 +133,15 @@ const Projects = () => {
         {projects.map((project, index) => (
           <Col
             key={project.id}
-            xs={12} md={6}  // Chaque projet occupe 100% de la largeur sur les petits écrans et 50% sur les moyens
+            xs={12} md={6}
             className="project"
             style={{
               backgroundImage: `url(${project.image})`,
-              opacity: isMobile ? 1 : 0, // Affichage normal sur mobile
+              opacity: isMobile ? 1 : 0,
               transform: isMobile ? "none" : `translateX(${index % 2 === 0 ? '-50px' : '50px'})`,
             }}
             ref={(el: HTMLDivElement | null) => (projectsRefs.current[index] = el)}
-            data-index={index} // On ajoute l'index au data attribut pour déterminer la direction
+            data-index={index}
             onClick={() => window.open(project.figmaLink, "_blank")}
           >
             <div className="overlay">
