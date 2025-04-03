@@ -8,7 +8,7 @@ const projects = [
     title: "Journée Porte Ouverte (JPO)",
     description: "Site web interactif pour la journée porte ouverte de l'université, permettant aux visiteurs de découvrir les différentes formations et services.",
     technologies: "React, SpringBoot, H2, SQL",
-    image: "/public/sae501.png",
+    image: "/sae501.png",
     figmaLink: "https://www.figma.com/design/stg7baNWJei3pr99RJ5eli/Maquette?node-id=0-1&t=VPOWdSwrrih9n2FL-1",
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     title: "Hakoshi",
     description: "Plateforme de gestion de stock et de suivi des commandes pour un commerce de sushi.",
     technologies: "Angular, Symfony, SQL",
-    image: "/public/sae401.png",
+    image: "/sae401.png",
     figmaLink: "https://www.figma.com/design/T09ITGulXjBEqKCvg3gFOV/SAE-401?node-id=0-1&t=XAx6fjaZgmzUqKvL-1",
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     title: "Webdoc",
     description: "Documentaire interactif en ligne permettant d'explorer des récits multimédias sur le musée de la grande guerre de Meaux",
     technologies: "HTML, CSS",
-    image: "/public/webdoc.png",
+    image: "/webdoc.png",
     figmaLink: "https://www.figma.com/file/exemple-Webdoc",
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     title: "AC2FL",
     description: "AC2FL est la refonte du site web d’un aéroclub de Frotey, modernisant son design et améliorant l’expérience utilisateur.",
     technologies: "PHP, Angular, Bootstrap",
-    image: "/public/AC2FL.png",
+    image: "/AC2FL.png",
     figmaLink: "https://www.figma.com/file/exemple-AC2FL",
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     title: "Xspace",
     description: "Site Xspace est un site web pour une entreprise fictive de téléportation offrant une alternative écologique aux sauts en parachute traditionnels, sans avion.",
     technologies: "HTML, CSS, Photoshop",
-    image: "/public/xspace.png",
+    image: "/xspace.png",
     figmaLink: "https://www.figma.com/design/hQyMiNojSlVPkt6Q5inp4M/Untitled?node-id=0-1&t=7Z4Y4ZsVs5ZvfC0g-1",
   },
   {
@@ -48,7 +48,7 @@ const projects = [
     title: "Site de Réservation de Matériels",
     description: "Système de réservation en ligne pour le prêt de matériel multimédia.",
     technologies: "HTML, CSS, PHP, MySQL",
-    image: "/public/SRM.png",
+    image: "/SRM.png",
     figmaLink: "https://www.figma.com/file/exemple-SRM",
   },
 ];

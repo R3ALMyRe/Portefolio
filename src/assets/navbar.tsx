@@ -5,11 +5,11 @@ function MyNavbar() {
         <Navbar expand="lg">
             <Container id="navbar">
                 <Navbar.Brand href="/">
-                    <img src="../public/Logo.svg" alt="logo" style={{ width: '100px' }} />
+                    <img src="/Logo.svg" alt="logo" style={{ width: '100px' }} />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <img 
-                        src="../public/menu.svg" 
+                        src="/menu.svg" 
                         alt="Menu" 
                         style={{ width: '30px', height: '30px' }} 
                     />
