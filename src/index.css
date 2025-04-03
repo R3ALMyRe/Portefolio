@@ -725,8 +725,6 @@ body {
   padding: 0;
   overflow: hidden;
   border: none;
-  transition: transform 0.3s ease;
-  will-change: transform, opacity;
 }
 
 .overlay {
@@ -740,13 +738,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  opacity: 0; /* Par défaut, l'overlay est invisible */
-  z-index: 1; /* S'assurer que l'overlay est au-dessus du projet */
+  opacity: 0;
+  z-index: 1;
 }
 
 .project:hover .overlay {
-  opacity: 1; /* Lorsque survolé, l'overlay devient visible */
-  backdrop-filter: blur(8px); /* Effet de flou sur le fond */
+  opacity: 1;
+  backdrop-filter: blur(8px); 
 }
 
 .project-content h3,

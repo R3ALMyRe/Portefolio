@@ -84,7 +84,7 @@ const Projects = () => {
       gsap.fromTo(
         titleRef.current,
         { opacity: 0, y: -50 },
-        { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+        { opacity: 1, y: 0, duration: 1, ease: "bounce.out" }
       );
 
       const observer = new IntersectionObserver(
@@ -95,16 +95,16 @@ const Projects = () => {
               gsap.to(entry.target, {
                 opacity: 1,
                 x: 0, // Rétablir la position à la normale
-                duration: 0.8,
-                ease: "power2.out",
+                duration: 0.6,
+                ease: "power3.out",
               });
             } else {
               // Animation de départ, à gauche pour les éléments impairs et à droite pour les éléments pairs
               gsap.to(entry.target, {
                 opacity: 0,
                 x: entry.target.dataset.index % 2 === 0 ? -200 : 200, // Déplacement vers la gauche ou la droite en fonction de l'index
-                duration: 0.8,
-                ease: "power2.out",
+                duration: 0.6,
+                ease: "power3.out",
               });
             }
           });
@@ -135,8 +135,8 @@ const Projects = () => {
             className="project"
             style={{
               backgroundImage: `url(${project.image})`,
-              opacity: 0,
-              transform: `translateX(${index % 2 === 0 ? '-50px' : '50px'})`, // Animation horizontale
+              opacity: isMobile ? 1 : 0, // Affichage normal sur mobile
+              transform: isMobile ? "none" : `translateX(${index % 2 === 0 ? '-50px' : '50px'})`,
             }}
             ref={(el: HTMLDivElement | null) => (projectsRefs.current[index] = el)}
             data-index={index} // On ajoute l'index au data attribut pour déterminer la direction
