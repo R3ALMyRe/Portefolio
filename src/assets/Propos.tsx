@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import myPhoto from "/my-photo.jpg";
+import myPhoto from "images/my-photo.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +42,7 @@ const AboutPage = () => {
   const handleClick = (index: number) => {
     const bubbleElement = document.getElementById(`bubble-${index}`);
     if (bubbleElement) {
-      bubbleElement.style.animation = "none"; // Désactive l'effet de flottement temporairement
+      bubbleElement.style.animation = "none";
 
       gsap.to(bubbleElement, {
         opacity: 0,
