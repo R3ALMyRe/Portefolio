@@ -50,7 +50,7 @@ const FirstPage: React.FC = () => {
     <Container fluid className="d-flex justify-content-center align-items-center vh-100" id="first-page-container">
       <Row className="w-100 d-flex flex-column align-items-center position-relative row-first">
         <Col className="text-center">
-          <p id="name" className="text-anim">RÉMY HAMELIN</p>
+          <p id="name" className="text-anim">RÉMY HAMELI</p>
         </Col>
         <Col className="text-center">
           <p id="typing" className="text-anim">Développeur Front & Back-end</p>
