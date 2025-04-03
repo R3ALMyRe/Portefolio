@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { gsap } from "gsap";
 
+
 const projects = [
   {
     id: 1,
@@ -24,7 +25,7 @@ const projects = [
     title: "Webdoc",
     description: "Documentaire interactif en ligne permettant d'explorer des récits multimédias sur le musée de la grande guerre de Meaux",
     technologies: "HTML, CSS",
-    image: "webdoc.png",
+    image: "/webdoc.png",
     figmaLink: "https://www.figma.com/file/exemple-Webdoc",
   },
   {
@@ -32,7 +33,7 @@ const projects = [
     title: "AC2FL",
     description: "AC2FL est la refonte du site web d’un aéroclub de Frotey, modernisant son design et améliorant l’expérience utilisateur.",
     technologies: "PHP, Angular, Bootstrap",
-    image: "AC2FL.png",
+    image: "/AC2FL.png",
     figmaLink: "https://www.figma.com/file/exemple-AC2FL",
   },
   {
@@ -40,7 +41,7 @@ const projects = [
     title: "Xspace",
     description: "Site Xspace est un site web pour une entreprise fictive de téléportation offrant une alternative écologique aux sauts en parachute traditionnels, sans avion.",
     technologies: "HTML, CSS, Photoshop",
-    image: "xspace.png",
+    image: "/xspace.png",
     figmaLink: "https://www.figma.com/design/hQyMiNojSlVPkt6Q5inp4M/Untitled?node-id=0-1&t=7Z4Y4ZsVs5ZvfC0g-1",
   },
   {
@@ -48,9 +49,11 @@ const projects = [
     title: "Site de Réservation de Matériels",
     description: "Système de réservation en ligne pour le prêt de matériel multimédia.",
     technologies: "HTML, CSS, PHP, MySQL",
-    image: "SRM.png",
+    image: "/SRM.png",
     figmaLink: "https://www.figma.com/file/exemple-SRM",
   },
+];
+  
 ];
 
 const Projects = () => {
