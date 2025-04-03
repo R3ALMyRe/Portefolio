@@ -53,8 +53,6 @@ const projects = [
     figmaLink: "https://www.figma.com/file/exemple-SRM",
   },
 ];
-  
-];
 
 const Projects = () => {
   const projectsRefs = useRef<(HTMLDivElement | null)[]>([]);
