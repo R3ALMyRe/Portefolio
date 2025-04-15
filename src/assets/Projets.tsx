@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { gsap } from "gsap";
+import '../styles/projets.css';
 
 
 const projects = [

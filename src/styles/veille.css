@@ -1,0 +1,117 @@
+.skills-slider-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .skills-slider {
+    margin-top: 30px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .slider-track {
+    display: flex;
+    gap: 40px;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .dev-skills .slider-track {
+    animation: scroll-left 30s linear infinite;
+  }
+  
+  .design-tools .slider-track {
+    animation: scroll-right 30s linear infinite;
+  }
+  
+  .slider-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .tech-watch-slider {
+    margin-top: 200px;
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+  }
+  
+  .title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Nouveau wrapper pour faire défiler les slides horizontalement */
+  .slides-wrapper {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+  }
+  
+  /* Chaque slide occupe toute la largeur */
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .site-image {
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #61dbfb;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* --- Indicateurs du carrousel --- */
+  
+  .indicators {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #61dbfb;
+  }
+  

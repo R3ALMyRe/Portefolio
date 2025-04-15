@@ -1,0 +1,77 @@
+
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background-color: rgba(0, 18, 36, 0.2); 
+    backdrop-filter: blur(10px); 
+  }
+  
+  /* Navbar sticky pour les grands écrans */
+  @media (min-width: 992px) {
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 10000;
+    }
+  }
+  
+  /* Pas sticky sur les petits écrans (mobiles) */
+  @media (max-width: 991px) {
+    .navbar {
+      position: relative;
+    }
+  
+    .navbar-toggler:focus {
+      outline: none; /* Supprime la bordure de focus */
+      box-shadow: none; /* Enlève l'ombre portée de focus */
+    }
+    
+   
+    .navbar-toggler {
+      border: none;
+    }
+    
+    /* Assurer qu'aucune animation ou effet n'est appliqué sur le bouton */
+    .navbar-toggler-icon {
+      transition: none !important; /* Désactive les animations */
+    }
+  }
+  
+  .navig:hover {
+    color: #70e0fc !important;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  
+  /* Style pour le logo à gauche */
+  .logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  /* Liens de la navbar */
+  .navig {
+    color: #ffffff !important;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path fill="%23fff" d="M0 5h30v4H0zm0 7h30v4H0zm0 7h30v4H0z"/></svg>'); /* Icone burger blanche */
+  }
+  
+  /* Optionnel: changer la couleur de fond du menu hamburger en mode mobile */
+  .navbar-toggler {
+    border: none; /* Enlève la bordure autour du hamburger */
+  }
+  
+  /* Ajouter un peu d'espace à droite */
+  .ms-auto {
+    margin-left: auto;
+  }
+  

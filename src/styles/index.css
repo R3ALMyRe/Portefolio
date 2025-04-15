@@ -71,6 +71,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
   padding: 8px 16px;
+  cursor: pointer;
 }
 
 .navbar-toggler-icon {
@@ -334,6 +335,7 @@ body {
 
 #text-propos{
   padding-right: 10%;
+  margin-top: 60px;
 }
 
 .about-button{
@@ -543,14 +545,14 @@ body {
 }
 
 /* Input et Textarea */
-.form-control {
+/* .form-control {
   border-radius: 5px;
   background-color: #002a45;
   color: white;
   border: 1px solid #003c5a;
   padding: 12px;
   margin-bottom: 15px;
-}
+} */
 
 .form-control:focus {
   border-color: #00d4ff;
@@ -842,7 +844,6 @@ body {
   animation: scroll-right 30s linear infinite;
 }
 
-
 .slider-title {
   text-align: center;
   font-size: 1.8rem;
@@ -864,6 +865,20 @@ body {
   margin-bottom: 20px;
 }
 
+.description {
+  font-size: 18px;
+  margin-bottom: 20px;
+ 
+}
+
+@media (max-width: 500px) {
+  .description {
+    width: 80%;
+    font-size: 12px;
+    margin: 0 auto;
+  }
+}
+
 .slider-container {
   position: relative;
   overflow: hidden;
@@ -873,20 +888,24 @@ body {
   justify-content: center;
 }
 
-.slide {
-  display: none;
-  text-align: center;
-  width: 100%;
-  transition: opacity 1s ease-in-out;
+/* Nouveau wrapper pour faire défiler les slides horizontalement */
+.slides-wrapper {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
 }
 
-.slide.active {
-  display: block;
-  opacity: 1;
+/* Chaque slide occupe toute la largeur */
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
 }
 
 .site-image {
   width: 800px;
+  max-width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
@@ -926,4 +945,27 @@ a:hover {
 .social-links a:hover {
   transform: scale(1.2);
   color: #00aaff;
+}
+
+/* --- Indicateurs du carrousel --- */
+
+.indicators {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #61dbfb;
 }

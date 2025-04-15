@@ -8,8 +8,7 @@ import Projects from './assets/Projets.tsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TechWatchSlider from './assets/Veille.tsx';
 import Footer from './assets/footer.tsx';
-import './index.css';
-
+import './styles/index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import myPhoto from "/my-photo.jpg";
+import '../styles/propos.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,10 +93,9 @@ const AboutPage = () => {
 
         {/* Colonne de droite avec le texte */}
         <Col md={6} id="text-propos">
-          <h2 className="about-title">About me :</h2>
           <p className="about-text">
-            Je suis Développeur Front-end et Back-end passionné par la création
-            d'expériences utilisateur. J'aime travailler avec des
+            étudiant en troisième année de BUT MMI, et je suis passionné par le developpement web et la création
+            d'interface utilisateur. J'aime travailler avec des
             technologies modernes et relever des défis techniques pour créer des
             applications web robustes et réactives.
           </p>

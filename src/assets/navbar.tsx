@@ -1,8 +1,10 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Link } from 'react-scroll';
+import '../styles/navbar.css';
 
 function MyNavbar() {
     return (
-        <Navbar expand="lg">
+        <Navbar expand="lg" className="navbar" fixed="top">
             <Container id="navbar">
                 <Navbar.Brand href="/">
                     <img src="/Logo.svg" alt="logo" style={{ width: '100px' }} />
@@ -16,10 +18,9 @@ function MyNavbar() {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link className="navig" href="/home">À propos</Nav.Link>
-                        <Nav.Link className="navig" href="/about">Compétences</Nav.Link>
-                        <Nav.Link className="navig" href="/projects">Projets</Nav.Link>
-                        <Nav.Link className="navig" href="/contacts">Contacts</Nav.Link>
+                    <Nav.Link as={Link} to="propos-container" smooth={true} duration={300} className="navig">À propos</Nav.Link>
+                    <Nav.Link as={Link} to="projects-container" smooth={true} duration={300} className="navig">Projets</Nav.Link>
+                    <Nav.Link as={Link} to="contact-container" smooth={true} duration={300} className="navig">Contacts</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

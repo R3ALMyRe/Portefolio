@@ -1,7 +1,10 @@
+import '../styles/contact.css';
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import emailjs from "emailjs-com"; // Importer EmailJS
+import emailjs from "emailjs-com";
+
+
 
 const Contact = () => {
   const contactRef = useRef(null);
@@ -75,7 +78,7 @@ const Contact = () => {
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formName">
               <Form.Label>Nom</Form.Label>
-              <Form.Control className="form-input"
+              <Form.Control className="form-input champs"
                 type="text"
                 placeholder="Votre nom"
                 name="name"
@@ -87,7 +90,7 @@ const Contact = () => {
 
             <Form.Group className="mb-3" controlId="formEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control className="form-input"
+              <Form.Control className="form-input champs"
                 type="email"
                 placeholder="Votre email"
                 name="email"
@@ -100,7 +103,7 @@ const Contact = () => {
             <Form.Group className="mb-3" controlId="formMessage">
               <Form.Label>Message</Form.Label>
               <Form.Control
-                className="message form-input"
+                className="message form-input champs"
                 as="textarea"
                 rows={4}
                 placeholder="Votre message"
