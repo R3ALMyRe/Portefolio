@@ -94,7 +94,7 @@ const AboutPage = () => {
         {/* Colonne de droite avec le texte */}
         <Col md={6} id="text-propos">
           <p className="about-text">
-            étudiant en troisième année de BUT MMI, et je suis passionné par le developpement web et la création
+            Étudiant en troisième année de BUT MMI, je suis passionné par le developpement web et la création
             d'interface utilisateur. J'aime travailler avec des
             technologies modernes et relever des défis techniques pour créer des
             applications web robustes et réactives.
